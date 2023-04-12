@@ -1,0 +1,13 @@
+.videos {
+  width: 100%;
+}
+
+.videos__wrapper {
+  margin: 0 auto;
+}
+
+.video__element {
+  top: 0;
+  left: 0;
+  width: 100%;
+}

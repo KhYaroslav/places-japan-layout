@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;  
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #102746;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1262px;
+  margin: 0 auto;
+}
+
+.section__title {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  position: relative;
+  padding-bottom: 7px;
+}
+
+.section__title::after {
+  display: block;
+  content: '';
+  width: 253px;
+  height: 3px;
+  background-color: #006DFE;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.benefits__card-more:hover, .benefits__card-more:focus, 
+.places__view-all:hover, .places__view-all:focus,
+.tour__more:hover, .tour__more:focus,
+.footer__menu-link:hover, .footer__menu-link:focus {
+  opacity: .65;
+}

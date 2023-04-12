@@ -1,0 +1,42 @@
+.footer {
+  background: #0E1D28;
+  padding: 119px 0;
+  margin-top: -3.3px;
+}
+
+.footer__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__logo {
+  width: 50%;
+}
+
+.footer__nav {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer__menu-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.footer__menu-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.foooter__logo-pic {
+  width: 170px;
+  height: 64px;
+}
+
