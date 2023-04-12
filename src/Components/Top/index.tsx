@@ -25,8 +25,8 @@ export default function Top() {
 
         <div className='top__cards'>
 
-          {tops.map((el) =>
-            <div className='top__card'>
+          {tops.map((el, i) =>
+            <div className='top__card' key={i}>
               <div className='top__card-pic'>
                 <img src={el.img} alt={el.title} className='top__card-thump' />
                 

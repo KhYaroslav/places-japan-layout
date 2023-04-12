@@ -70,3 +70,28 @@
   background: url(../../assets/svg/arrow-right-icon.svg) no-repeat right center;
   transition: .2s all;
 }
+
+@media screen and (max-width: 960px) {
+  
+  .benefits__cards {
+    padding: 0 15px 0 15px;
+    grid-column-gap: 35px;
+  }
+  
+  .benefits__card {
+    margin-bottom: 55px;
+  }
+
+  .benefits__title {
+    padding: 54px 15px;
+  }
+  
+  .benefits__wrapper {
+    box-shadow: none;
+  }
+
+  .benefits {
+    margin-bottom: 75px;
+  }
+
+}

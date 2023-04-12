@@ -93,3 +93,11 @@
   height: 100%;
   z-index: 4;
 }
+
+@media screen and (max-width: 960px) {
+
+  .places__card {
+    grid-column: span 6;
+  }
+
+}

@@ -35,8 +35,8 @@ export default function Header() {
 
         <nav className={`header__nav ${open ? 'header__nav-active' : ''}`}>
           <ul className="header__list">
-            {item.map((el) =>
-              <li className="header__item">
+            {item.map((el, i) =>
+              <li className="header__item" key={i}>
                 <Link to={el.location} className="header__link">{el.title}</Link>
               </li>
             )}

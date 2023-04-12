@@ -18,14 +18,16 @@ export default function Footer() {
             <img src={logo} alt="logo" className='foooter__logo-pic' />
           </div>
           <nav className='footer__nav'>
-            {footer_content.map((el) =>
-              <ul className='footer__menu'>
+            {footer_content.map((el, i) =>
+              <ul className='footer__menu' key={i}>
                 <li className='footer__menu-item'>
                   <h3 className='footer__menu-title'>{el.title}</h3>
                 </li>
-                {el.navigation.map((el) => <li className='footer__menu-item'>
-                  <Link to='#!' className='footer__menu-link'>{el.link}</Link>
-                </li>)}
+                {el.navigation.map((el, i) =>
+                  <li className='footer__menu-item' key={i}>
+                    <Link to='#!' className='footer__menu-link'>{el.link}</Link>
+                  </li>
+                )}
               </ul>
             )}
           </nav>
