@@ -5,7 +5,7 @@
 .tours__tour {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0 108px;
+  grid-column-gap: 108px;
   align-items: center;
   margin-bottom: 77px;
 }
@@ -38,3 +38,44 @@
   text-decoration: none;
   background: url(../../assets/svg/arrow-right-icon.svg) no-repeat right center;
 }
+
+@media screen and (max-width: 960px) {
+  
+  .tours__tour {
+    grid-column-gap: 35px;
+  }
+
+  .tour__info {
+    padding-left: 0;
+  }
+
+  .tour__title, .tour__desc {
+    margin-bottom: 15px;
+  }
+
+}
+
+@media screen and (max-width: 629px) {
+
+  .tour__pic, .tour__info {
+    grid-column: span 2;
+  }
+
+  .tour__pic {
+    margin-bottom: 10px;
+  }
+
+  .tours__tour {
+    margin-bottom: 40px;
+  }
+
+  .tour__pic_mob-first{
+    grid-row-start: -1;
+  }
+
+  .tours {
+    margin-bottom: 100px;
+  }
+}
+
+

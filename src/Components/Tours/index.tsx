@@ -38,7 +38,7 @@ export default function Tours() {
               </p>
               <Link to='#!' className='tour__more'>view prefecture</Link>
             </div>
-          <div className='tour__pic'>
+          <div className='tour__pic tour__pic_mob-first'>
             <img src={tours[1].img} alt={tours[1].title} />
           </div>
         </div>

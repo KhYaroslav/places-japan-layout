@@ -95,3 +95,19 @@
   }
 
 }
+
+@media screen and (max-width: 767px) {
+  
+  .benefits__card {
+    grid-column: span 3;
+  }
+
+  .benefits__card-pic, .benefits__card-desc, .benefits__card-title {
+    margin-bottom: 17px;
+  }
+
+  .benefits {
+    margin-bottom: 20px;
+  }
+
+}

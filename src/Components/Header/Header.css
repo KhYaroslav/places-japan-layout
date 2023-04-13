@@ -80,6 +80,10 @@
 
 @media screen and (max-width: 767px) {
   
+  .header__wrapper {
+    padding-top: 28px;
+  }
+
   .header__burger {
     display: block;
   }
@@ -124,5 +128,12 @@
     top: 20px;
     right: 20px;
     z-index: 11;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  
+  .header__nav {
+    padding: 75px 30px;
   }
 }

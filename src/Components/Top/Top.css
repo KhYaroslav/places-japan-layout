@@ -6,11 +6,6 @@
   margin-bottom: 54px;
 }
 
-.top__card-pic {
-  position: relative;
-  margin-bottom: 45px;
-}
-
 .top__card-stats {
   position: absolute;
   bottom: 0;
@@ -20,17 +15,27 @@
   background: rgba(21, 24, 36, 0.6);
 }
 
+.top__card-pic {
+  position: relative;
+  margin-bottom: 45px;
+}
+
 .top__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 57px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 57px;
+  grid-row-gap: 57px;
+}
+
+.top__card {
+  grid-column: span 2;
 }
 
 .top__card-title {
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0 auto 0 0;
 }
 
@@ -53,11 +58,12 @@
   background: url(../../assets/svg/comment-icon.svg) no-repeat right center;
 }
 
-.top__card-likes, .top__card-comments {
+.top__card-likes,
+.top__card-comments {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .top_card-desc {
@@ -78,10 +84,37 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  color: #FFFFFF;
-  background: #006DFE;
+  color: #ffffff;
+  background: #006dfe;
 }
 
-.top__card-link:hover, .top__card-link:active, .top__card-link:focus {
+.top__card-link:hover,
+.top__card-link:active,
+.top__card-link:focus {
   background: #0366da;
+}
+
+@media screen and (max-width: 960px) {
+
+  .top__cards {
+    grid-column-gap: 25px;
+    grid-row-gap: 55px;
+  }
+
+  .top__card {
+    grid-column: span 3;
+  }
+  
+  .top__card-pic {
+    margin-bottom: 25px;
+  }
+
+}
+
+@media screen and (max-width: 629px) {
+  
+  .top__card {
+    grid-column: span 6;
+  }
+
 }
