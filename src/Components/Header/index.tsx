@@ -15,7 +15,11 @@ export default function Header() {
     { location: '#!', title: 'Sign in' }
   ]
 
-  const closeBurgerMobile = () => {
+  useEffect(() => {
+    window.onscroll = () => {
+      setScrollY(window.pageYOffset > 0)
+    }
+    
     const menuLinks = document.querySelectorAll('.header__link')
     if (window.innerWidth <= 767) {
       for (let i = 0; i < menuLinks.length; i += 1) {
@@ -24,13 +28,6 @@ export default function Header() {
         });
       }
     }
-  }
-
-  useEffect(() => {
-    window.onscroll = () => {
-      setScrollY(window.pageYOffset > 0)
-    }
-    closeBurgerMobile();
   }, [])
 
   const openNavHandler = () => setOpen((prev) => !prev);
@@ -49,10 +46,11 @@ export default function Header() {
           <ul className="header__list">
             {item.map((el, i) =>
               <li className="header__item" key={i}>
-                <Link to={el.location}
+                <Link
+                  to={el.location}
                   activeClass="active"
                   smooth
-                  offset={-100}
+                  offset={window.innerWidth <= 767 ? -100 : -120}
                   spy
                   className="header__link"
                 >
