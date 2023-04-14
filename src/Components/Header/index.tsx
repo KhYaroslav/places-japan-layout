@@ -28,9 +28,17 @@ export default function Header() {
         });
       }
     }
-  }, [])
 
-  const openNavHandler = () => setOpen((prev) => !prev);
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [open])
+
+  const openNavHandler = () => {
+    setOpen((prev) => !prev)
+  }
 
   return (
   <div className={`header ${scrollY ? 'header__active' : ''}`}>
