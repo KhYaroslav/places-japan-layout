@@ -28,18 +28,18 @@ export default function Places() {
 
         <div className='places__cards'>
           {cards.map((el, i) =>
-            <figure
+            <div
               className={`places__card ${i < 2 ? 'places__card_size-lg' : 'places__card_size-sm'}`} key={i}>
               <img
                 src={el.img}
                 alt={el.title}
                 className={`places__card-pic ${i < 2 ? 'places__card-pic_size-lg' : 'places__card-pic_size-sm'}`}
               />
-              <figcaption className='places__card-title'>
+              <h3 className='places__card-title'>
                 {el.title}
-              </figcaption>
+              </h3>
               <Link to='#!' className='places__card-link'></Link>
-            </figure> 
+            </div> 
           )}
         </div>
       </div>
