@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll'
 import logo from '../../assets/svg/logo-icon.svg'
 import './Header.css'
 import { useEffect, useState } from 'react'
@@ -9,20 +9,32 @@ export default function Header() {
   const [open, setOpen] = useState(false)
 
   const item = [
-    { location: '/Articles', title: 'Articles' },
-    { location: '/Locations', title: 'Locations' },
-    { location: '/Videos', title: 'Videos' },
-    { location: '/Sign in', title: 'Sign in' }
+    { location: 'articles', title: 'Articles' },
+    { location: 'locations', title: 'Locations' },
+    { location: 'video', title: 'Videos' },
+    { location: '#!', title: 'Sign in' }
   ]
+
+  const closeBurgerMobile = () => {
+    const menuLinks = document.querySelectorAll('.header__link')
+    if (window.innerWidth <= 767) {
+      for (let i = 0; i < menuLinks.length; i += 1) {
+        menuLinks[i].addEventListener('click', () => {
+          setOpen(false);
+        });
+      }
+    }
+  }
 
   useEffect(() => {
     window.onscroll = () => {
       setScrollY(window.pageYOffset > 0)
     }
+    closeBurgerMobile();
   }, [])
 
   const openNavHandler = () => setOpen((prev) => !prev);
-  
+
   return (
   <div className={`header ${scrollY ? 'header__active' : ''}`}>
     <div className="wrapper">
@@ -37,7 +49,15 @@ export default function Header() {
           <ul className="header__list">
             {item.map((el, i) =>
               <li className="header__item" key={i}>
-                <Link to={el.location} className="header__link">{el.title}</Link>
+                <Link to={el.location}
+                  activeClass="active"
+                  smooth
+                  offset={-100}
+                  spy
+                  className="header__link"
+                >
+                  {el.title}
+                </Link>
               </li>
             )}
           </ul>

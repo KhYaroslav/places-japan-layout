@@ -19,7 +19,7 @@ export default function Top() {
   ]
 
   return (
-    <section className='top'>
+    <section className='top' id='locations'>
       <div className='container'>
         <h2 className='top__title section__title'>Today top places to visit</h2>
 

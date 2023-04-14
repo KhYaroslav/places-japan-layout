@@ -10,7 +10,7 @@ export default function Tours() {
   ]
 
   return (
-    <div className='tours'>
+    <div className='tours' id='articles'>
       <div className='container'>
 
         <div className="tours__tour tour">
