@@ -14,7 +14,7 @@ export default function Main() {
     <Header />
     
     <main className='main'>
-      <section className='intro'>
+      <div className='intro'>
         <div className="wrapper">
           <h1 className="intro__title">Discover Amazing places in Japan</h1>
           <p className="intro__subtitle">
@@ -22,7 +22,7 @@ export default function Main() {
           </p>
           <Form />  
         </div>
-      </section>
+      </div>
       <Benefits />
       <Places />
       <Tours />
